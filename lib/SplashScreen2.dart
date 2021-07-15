@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+import 'package:mlm/Login.dart';
 import './SignUp.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -628,7 +629,7 @@ class SplashScreen2 extends StatelessWidget {
                     Pin(size: 60.0, middle: 0.5196),
                     child: InkWell(
                       onTap: () {
-                        Navigator.of(context).pushNamed(SignUp.routname);
+                        Navigator.of(context).pushNamed(Login.routname);
                       },
                       child: Stack(
                         children: <Widget>[
@@ -737,15 +738,22 @@ class SplashScreen2 extends StatelessWidget {
                               Pinned.fromPins(
                                 Pin(size: 54.0, middle: 1.0),
                                 Pin(size: 16.0, end: 4.0),
-                                child: Text(
-                                  'Sign up.',
-                                  style: TextStyle(
-                                    fontFamily: 'Montserrat',
-                                    fontSize: 13,
-                                    color: const Color(0xff2678b7),
-                                    fontWeight: FontWeight.w500,
+                                child: InkWell(onTap: () {
+                            Navigator.of(context)
+                                .pushNamed(SignUp.routname);
+                          },
+                                  child: Container(
+                                    child: Text(
+                                      'Sign up.',
+                                      style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontSize: 13,
+                                        color: const Color(0xff2678b7),
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
                                   ),
-                                  textAlign: TextAlign.center,
                                 ),
                               ),
                               Pinned.fromPins(

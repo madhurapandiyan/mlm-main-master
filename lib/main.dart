@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mlm/Forgetpwd.dart';
 import 'package:mlm/Login.dart';
+import 'package:mlm/OTP.dart';
 import 'package:mlm/OnboardingScreen2.dart';
 import 'package:mlm/OnboardingScreen21.dart';
 import 'package:mlm/SignUp.dart';
@@ -32,16 +34,16 @@ class MyApp extends StatelessWidget {
       ),
       home: OnboardingScreen1(),
       routes: {
-        OnboardingScreen1.routname:(ctx)=>OnboardingScreen1(),
-        OnboardingScreen2.routname:(ctx)=>OnboardingScreen2(),
-        OnboardingScreen21.routname:(ctx)=>OnboardingScreen21(),
-        SplashScreen.routname:(ctx)=>SplashScreen(),
-        SignUp.routname:(ctx)=>SignUp(),
-        Login.routname:(ctx)=>Login()
+        OnboardingScreen1.routname: (ctx) => OnboardingScreen1(),
+        OnboardingScreen2.routname: (ctx) => OnboardingScreen2(),
+        OnboardingScreen21.routname: (ctx) => OnboardingScreen21(),
+        SplashScreen.routname: (ctx) => SplashScreen(),
+        SignUp.routname: (ctx) => SignUp(),
+        Login.routname: (ctx) => Login(),
+        OTP.routename: (ctx) => OTP(),
+        Forgetpwd.routename: (ctx) => Forgetpwd()
         //SplashScreen2.routname:(ctx)=>SplashScreen2()
-
       },
-      
     );
   }
 }

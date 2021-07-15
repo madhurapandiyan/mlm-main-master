@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:mlm/SplashScreen.dart';
+import 'package:mlm/SplashScreen2.dart';
 import './OnboardingScreen2.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -428,13 +429,21 @@ class OnboardingScreen1 extends StatelessWidget {
                                             fit: BoxFit.fill,
                                           ),
                                         ),
-                                        Pinned.fromPins(
-                                          Pin(size: 383.7, middle: 0.4508),
-                                          Pin(size: 531.9, middle: 0.4827),
-                                          child: SvgPicture.string(
-                                            _svg_uzrbz7,
-                                            allowDrawingOutsideViewBox: true,
-                                            fit: BoxFit.fill,
+                                        InkWell(onTap: () {
+                            Navigator.of(context)
+                                .pop(SplashScreen2.routname);
+                          },
+                                          child: Container(height: 30,
+                                          width: 30,
+                                            child: Pinned.fromPins(
+                                              Pin(size: 383.7, middle: 0.4508),
+                                              Pin(size: 531.9, middle: 0.4827),
+                                              child: SvgPicture.string(
+                                                _svg_uzrbz7,
+                                                allowDrawingOutsideViewBox: true,
+                                                fit: BoxFit.fill,
+                                              ),
+                                            ),
                                           ),
                                         ),
                                         Pinned.fromPins(

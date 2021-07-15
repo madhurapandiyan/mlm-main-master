@@ -5,6 +5,7 @@ import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Forgetpwd extends StatelessWidget {
+  static const routename = "/forgetpassword";
   Forgetpwd({
     Key? key,
   }) : super(key: key);

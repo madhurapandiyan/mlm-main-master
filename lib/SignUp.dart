@@ -843,19 +843,24 @@ class SignUp extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Pinned.fromPins(
-                    Pin(startFraction: 0.3817, endFraction: 0.3844),
-                    Pin(size: 19.0, middle: 0.6153),
-                    child:
-                        // Adobe XD layer: 'Create account' (text)
-                        Text(
-                      'Create account',
-                      style: TextStyle(
-                        fontFamily: 'Montserrat-Regular',
-                        fontSize: 16,
-                        color: const Color(0xff007bff),
+                  InkWell(onTap: () {
+                            Navigator.of(context)
+                                .pushNamed(OTP.routename);
+                          },
+                    child: Pinned.fromPins(
+                      Pin(startFraction: 0.3817, endFraction: 0.3844),
+                      Pin(size: 19.0, middle: 0.6153),
+                      child:
+                          // Adobe XD layer: 'Create account' (text)
+                          Text(
+                        'Create account',
+                        style: TextStyle(
+                          fontFamily: 'Montserrat-Regular',
+                          fontSize: 16,
+                          color: const Color(0xff007bff),
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.center,
                     ),
                   ),
                   Pinned.fromPins(

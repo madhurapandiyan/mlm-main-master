@@ -5,6 +5,7 @@ import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class OTP extends StatelessWidget {
+  static const routename = "/otp";
   OTP({
     Key? key,
   }) : super(key: key);
@@ -706,19 +707,25 @@ class OTP extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Pinned.fromPins(
-                    Pin(startFraction: 0.3664, endFraction: 0.369),
-                    Pin(size: 19.0, middle: 0.4468),
-                    child:
-                        // Adobe XD layer: 'Create account' (text)
-                        Text(
-                      'Confirm Account',
-                      style: TextStyle(
-                        fontFamily: 'Montserrat-Regular',
-                        fontSize: 16,
-                        color: const Color(0xff007bff),
+                  InkWell(
+                    onTap: () {
+                            Navigator.of(context)
+                                .pushNamed(Login.routname);
+                          },
+                    child: Pinned.fromPins(
+                      Pin(startFraction: 0.3664, endFraction: 0.369),
+                      Pin(size: 19.0, middle: 0.4468),
+                      child:
+                          // Adobe XD layer: 'Create account' (text)
+                          Text(
+                        'Confirm Account',
+                        style: TextStyle(
+                          fontFamily: 'Montserrat-Regular',
+                          fontSize: 16,
+                          color: const Color(0xff007bff),
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.center,
                     ),
                   ),
                   Pinned.fromPins(

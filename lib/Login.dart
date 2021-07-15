@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mlm/Forgetpwd.dart';
 
 class Login extends StatelessWidget {
   static const routname = "/login";
@@ -836,18 +837,23 @@ class Login extends StatelessWidget {
                   ),
                 ),
                 Container(),
-                Pinned.fromPins(
-                  Pin(size: 150.0, middle: 0.4968),
-                  Pin(size: 16.0, end: 391.8),
-                  child: Text(
-                    'Forget your password?',
-                    style: TextStyle(
-                      fontFamily: 'Montserrat',
-                      fontSize: 13,
-                      color: const Color(0xff2678b7),
-                      fontWeight: FontWeight.w500,
+                InkWell(onTap: () {
+                            Navigator.of(context)
+                                .pushNamed(Forgetpwd.routename);
+                          },
+                  child: Pinned.fromPins(
+                    Pin(size: 150.0, middle: 0.4968),
+                    Pin(size: 16.0, end: 391.8),
+                    child: Text(
+                      'Forget your password?',
+                      style: TextStyle(
+                        fontFamily: 'Montserrat',
+                        fontSize: 13,
+                        color: const Color(0xff2678b7),
+                        fontWeight: FontWeight.w500,
+                      ),
+                      textAlign: TextAlign.center,
                     ),
-                    textAlign: TextAlign.center,
                   ),
                 ),
               ],

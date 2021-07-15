@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
+import 'package:mlm/SplashScreen.dart';
 import './OnboardingScreen21.dart';
 import 'package:adobe_xd/page_link.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -670,46 +671,52 @@ class OnboardingScreen2 extends StatelessWidget {
                         Pin(size: 50.0, end: 75.5),
                         child:
                             // Adobe XD layer: 'Skip' (group)
-                            Stack(
-                          children: <Widget>[
-                            Pinned.fromPins(
-                              Pin(start: 0.0, end: 0.0),
-                              Pin(start: 0.0, end: 0.0),
-                              child:
-                                  // Adobe XD layer: 'Rectangle' (shape)
-                                  Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8.0),
-                                  border: Border.all(
-                                      width: 1.0,
-                                      color: const Color(0xffeef1f7)),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: const Color(0x304162a9),
-                                      offset: Offset(-13, 47),
-                                      blurRadius: 79,
-                                    ),
-                                  ],
+                            InkWell(
+                          onTap: () {
+                            Navigator.of(context)
+                                .pushNamed(SplashScreen.routname);
+                          },
+                          child: Stack(
+                            children: <Widget>[
+                              Pinned.fromPins(
+                                Pin(start: 0.0, end: 0.0),
+                                Pin(start: 0.0, end: 0.0),
+                                child:
+                                    // Adobe XD layer: 'Rectangle' (shape)
+                                    Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8.0),
+                                    border: Border.all(
+                                        width: 1.0,
+                                        color: const Color(0xffeef1f7)),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: const Color(0x304162a9),
+                                        offset: Offset(-13, 47),
+                                        blurRadius: 79,
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                            Pinned.fromPins(
-                              Pin(startFraction: 0.3458, endFraction: 0.3542),
-                              Pin(size: 19.0, middle: 0.5645),
-                              child:
-                                  // Adobe XD layer: 'Skip' (text)
-                                  Text(
-                                'Skip',
-                                style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontSize: 16,
-                                  color: const Color(0xff007bff),
-                                  fontWeight: FontWeight.w500,
+                              Pinned.fromPins(
+                                Pin(startFraction: 0.3458, endFraction: 0.3542),
+                                Pin(size: 19.0, middle: 0.5645),
+                                child:
+                                    // Adobe XD layer: 'Skip' (text)
+                                    Text(
+                                  'Skip',
+                                  style: TextStyle(
+                                    fontFamily: 'Montserrat',
+                                    fontSize: 16,
+                                    color: const Color(0xff007bff),
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                  textAlign: TextAlign.center,
                                 ),
-                                textAlign: TextAlign.center,
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                       Pinned.fromPins(
