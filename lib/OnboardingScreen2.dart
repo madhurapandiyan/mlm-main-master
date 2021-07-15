@@ -608,76 +608,62 @@ class OnboardingScreen2 extends StatelessWidget {
                         Pin(size: 50.0, end: 74.0),
                         child:
                             // Adobe XD layer: 'Next' (group)
-                            PageLink(
-                          links: [
-                            PageLinkInfo(
-                              transition: LinkTransition.Fade,
-                              ease: Curves.easeOut,
-                              duration: 0.3,
-                              pageBuilder: () => OnboardingScreen21(),
-                            ),
-                          ],
-                          child: Stack(
-                            children: <Widget>[
-                              Pinned.fromPins(
-                                Pin(start: 0.0, end: 0.0),
-                                Pin(start: 0.0, end: 0.0),
-                                child:
-                                    // Adobe XD layer: 'Rectangle' (shape)
-                                    Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(8.0),
-                                    color: const Color(0xff2b2b2b),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: const Color(0x304162a9),
-                                        offset: Offset(-13, 47),
-                                        blurRadius: 79,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              InkWell(
-                                onTap: () {
-                                  Navigator.of(context)
-                                      .pushNamed(OnboardingScreen21.routname);
-                                },
-                                child: Pinned.fromPins(
-                                  Pin(
-                                      startFraction: 0.3417,
-                                      endFraction: 0.3417),
-                                  Pin(size: 19.0, middle: 0.5161),
+                            Stack(
+                              children: <Widget>[
+                                Pinned.fromPins(
+                                  Pin(start: 0.0, end: 0.0),
+                                  Pin(start: 0.0, end: 0.0),
                                   child:
-                                      // Adobe XD layer: 'Next' (text)
-                                      Text(
-                                    'Next',
-                                    style: TextStyle(
-                                      fontFamily: 'Montserrat',
-                                      fontSize: 16,
-                                      color: const Color(0xffffffff),
-                                      fontWeight: FontWeight.w500,
+                                      // Adobe XD layer: 'Rectangle' (shape)
+                                      Container(
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(8.0),
+                                      color: const Color(0xff2b2b2b),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: const Color(0x304162a9),
+                                          offset: Offset(-13, 47),
+                                          blurRadius: 79,
+                                        ),
+                                      ],
                                     ),
-                                    textAlign: TextAlign.center,
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                        ),
+                                InkWell(
+                                  onTap: () {
+                                    Navigator.of(context)
+                                        .pushNamed(OnboardingScreen21.routname);
+                                  },
+                                  child: Pinned.fromPins(
+                                    Pin(
+                                        startFraction: 0.3417,
+                                        endFraction: 0.3417),
+                                    Pin(size: 19.0, middle: 0.5161),
+                                    child:
+                                        // Adobe XD layer: 'Next' (text)
+                                        Text(
+                                      'Next',
+                                      style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontSize: 16,
+                                        color: const Color(0xffffffff),
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                       ),
                       Pinned.fromPins(
                         Pin(size: 120.0, middle: 0.4793),
                         Pin(size: 50.0, end: 75.5),
                         child:
                             // Adobe XD layer: 'Skip' (group)
-                            InkWell(
-                          onTap: () {
-                            Navigator.of(context)
-                                .pushNamed(SplashScreen.routname);
-                          },
-                          child: Stack(
-                            children: <Widget>[
+                            InkWell(onTap: (){Navigator.of(context).pushNamed(SplashScreen.routname);},
+                              child: Stack(
+                                                      children: <Widget>[
                               Pinned.fromPins(
                                 Pin(start: 0.0, end: 0.0),
                                 Pin(start: 0.0, end: 0.0),
@@ -715,9 +701,9 @@ class OnboardingScreen2 extends StatelessWidget {
                                   textAlign: TextAlign.center,
                                 ),
                               ),
-                            ],
-                          ),
-                        ),
+                                                      ],
+                                                    ),
+                            ),
                       ),
                       Pinned.fromPins(
                         Pin(size: 247.0, end: 64.0),
